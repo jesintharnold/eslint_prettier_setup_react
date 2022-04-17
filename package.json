@@ -6,6 +6,8 @@
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/react": "^12.1.1",
 		"@testing-library/user-event": "^13.5.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.8",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "5.0.0",
@@ -18,7 +20,7 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint src/**/*.js",
 		"fix": "eslint src/**/*.js --fix",
-		"format": "prettier --write \"**/*.{js,jsx,json,md}\""  
+		"format": "prettier --write \"**/*.{js,jsx,json,md}\""
 	},
 	"eslintConfig": {
 		"extends": [
@@ -44,5 +46,15 @@
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react": "^7.29.4",
 		"prettier": "^2.6.2"
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,css,html}":[
+			"npm run fix && npm run format"
+		]
+	},
+	"husky":{
+		"hooks":{
+			"pre-commit":"lint-staged"
+		}
 	}
 }
