@@ -6,6 +6,7 @@
 -   [ ] npm install eslint-config-prettier eslint-plugin-prettier
 
 ##### .eslintrc configuration
+
 ```
 "extends": [
     "eslint:recommended",
@@ -26,15 +27,15 @@
 
 "env": {
 		"jest": true
-	},    
+	},
 ```
- 📝 `Indent` will be taken care by prettier , `no need to mention` Indent rule in eslint
 
+📝 `Indent` will be taken care by prettier , `no need to mention` Indent rule in eslint
 
+##### .prettierrc configuration
 
-##### .prettierrc configuration 
 ```
-{   
+{
     "semi": true,
     "tabWidth":4,
     "printWidth": 100,
@@ -44,11 +45,10 @@
 }
 ```
 
-
 ##### Package.json
 
 ```
 "lint": "eslint src/**/*.js",
 "fix": "eslint src/**/*.js --fix",
-"format": "prettier --write \"**/*.{js,jsx,json,md}\""  
+"format": "prettier --write \"**/*.{js,jsx,json,md}\""
 ```
