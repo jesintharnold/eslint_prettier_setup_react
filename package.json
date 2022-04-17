@@ -49,7 +49,7 @@
 	},
 	"lint-staged": {
 		"src/**/*.{js,jsx,css,html}":[
-			"npm run fix && npm run format"
+			"npm run format"
 		]
 	},
 	"husky":{
