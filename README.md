@@ -3,7 +3,9 @@
 -   [ ] npm install -g eslint
 -   [ ] eslint --init
 -   [ ] Select appropriate options , given eslint settings needs to be added additionally.
--   [ ] npm install eslint-config-prettier eslint-plugin-prettier
+-   [ ] npm install eslint-config-prettier eslint-plugin-prettier husky lint-staged
+-   [ ] npx husky-init (Will setup pre-commit hook)
+-   [ ] Edit npx in husky precommit file
 
 ##### .eslintrc configuration
 
@@ -51,4 +53,10 @@
 "lint": "eslint src/**/*.js",
 "fix": "eslint src/**/*.js --fix",
 "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+```
+
+```
+"lint-staged": {
+	"*.{js,jsx,json,css,md}": "npm run format"
+	            }
 ```
